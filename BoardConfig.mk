@@ -4,7 +4,7 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
-DEVICE_PATH := device/xiaomi/juice
+DEVICE_PATH := device/realme/rmx2103
 
 # Broken R
 BUILD_BROKEN_DUP_RULES := true
@@ -31,7 +31,7 @@ BOARD_ANT_WIRELESS_DEVICE := "qualcomm-hidl"
 DEXPREOPT_GENERATE_APEX_IMAGE := true
 
 # Assert
-TARGET_OTA_ASSERT_DEVICE := lime,citrus,lemon,pomelo,juice
+TARGET_OTA_ASSERT_DEVICE := RMX2103,RMX2103PU,RMX2103L1
 
 # Audio
 AUDIO_FEATURE_ENABLED_AAC_ADTS_OFFLOAD := true
@@ -100,10 +100,10 @@ BOARD_KERNEL_OFFSET := 0x00008000
 BOARD_KERNEL_IMAGE_NAME := Image.gz
 BOARD_KERNEL_SEPARATED_DTBO := true
 TARGET_KERNEL_ARCH := arm64
-TARGET_KERNEL_HEADERS := kernel/xiaomi/juice
+TARGET_KERNEL_HEADERS := kernel/realme/sm6115
 
 TARGET_PREBUILT_KERNEL := $(DEVICE_PATH)/prebuilt/kernel
-TARGET_PREBUILT_DTB := $(DEVICE_PATH)/prebuilt/dtb
+TARGET_PREBUILT_DTB := $(DEVICE_PATH)/prebuilt/dtb.img
 BOARD_PREBUILT_DTBOIMAGE := $(DEVICE_PATH)/prebuilt/dtbo.img
 BOARD_BOOTIMG_HEADER_VERSION := 2
 BOARD_MKBOOTIMG_ARGS := --ramdisk_offset $(BOARD_RAMDISK_OFFSET)
@@ -183,4 +183,4 @@ BOARD_AVB_RECOVERY_ROLLBACK_INDEX := 1
 BOARD_AVB_RECOVERY_ROLLBACK_INDEX_LOCATION := 1
 
 # Inherit from the proprietary version
--include vendor/xiaomi/juice/BoardConfigVendor.mk
+-include vendor/realme/rmx2103/BoardConfigVendor.mk

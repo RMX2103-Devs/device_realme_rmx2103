@@ -16,7 +16,7 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/updatable_apex.mk)
 $(call inherit-product, frameworks/native/build/phone-xhdpi-6144-dalvik-heap.mk)
 
 # Inherit from vendor if exists
-$(call inherit-product-if-exists, vendor/xiaomi/juice/juice-vendor.mk)
+$(call inherit-product-if-exists, vendor/realme/rmx2103/rmx2103-vendor.mk)
 
 # Soong Namespace
 PRODUCT_SOONG_NAMESPACES += \
@@ -80,7 +80,6 @@ PRODUCT_PACKAGES += \
 
 # Init
 PRODUCT_PACKAGES += \
-    init.mi_thermald.rc \
     init.target.rc
 
 # Input
@@ -92,7 +91,7 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/keylayout/uinput-cdfinger.kl:$(TARGET_COPY_OUT_SYSTEM)/usr/keylayout/uinput-cdfinger.kl
     
 # Lights
-PRODUCT_PACKAGES += \
+#PRODUCT_PACKAGES += \
     android.hardware.light@2.0-service.xiaomi_juice
 
 # Overlays
